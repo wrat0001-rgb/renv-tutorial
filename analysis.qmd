@@ -4,3 +4,38 @@ date: "20 May 2026"
 format: html
 ---
 
+
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point()
+```
+
+# Summary table
+```{r}
+penguins_summary <- penguins |>
+  summarise(
+    n = n(),
+    avg_bill_length = mean(bill_length_mm, na.rm = TRUE),
+    avg_bill_depth = mean(bill_depth_mm, na.rm = TRUE),
+    avg_flipper = mean(flipper_length_mm, na.rm = TRUE),
+    avg_body_mass = mean(body_mass_g, na.rm = TRUE)
+  )
+
+penguins_summary
+```
+
+# Summary plot
+```{r}
+#| label: fig-scatter-plot
+#| fig-cap: "A scatter plot of bill length vs. bill depth for the penguins dataset."
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point()
+```
+
+According to the scatter plot in Figure @fig-scatter-plot, there appears to be a positive correlation between bill length and bill depth among the penguins. This suggests that as the bill length increases, the bill depth also tends to increase.
+
