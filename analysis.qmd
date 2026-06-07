@@ -41,3 +41,5 @@ According to the scatter plot in @fig-scatter-plot, there appears to be a positi
 
 # new section
 adding this to test merge to main
+line1
+line2
