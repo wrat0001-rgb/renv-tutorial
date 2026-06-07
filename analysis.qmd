@@ -39,3 +39,5 @@ penguins |>
 
 According to the scatter plot in @fig-scatter-plot, there appears to be a positive correlation between bill length and bill depth among the penguins. This suggests that as the bill length increases, the bill depth also tends to increase.
 
+# new section
+adding this to test merge to main
